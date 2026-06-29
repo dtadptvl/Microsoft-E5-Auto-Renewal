@@ -153,15 +153,13 @@ class HTTPClient:
             'redirect_uri': 'http://localhost:53682/'
         }
 
-       response = await cls.instance.post(cls.token_endpoint, headers=headers, data=data)
+        response = await cls.instance.post(cls.token_endpoint, headers=headers, data=data)
         res_data = response.json()
         
-        # --- BẮT ĐẦU ĐOẠN THÊM VÀO ---
         new_refresh = res_data.get('refresh_token')
         if new_refresh:
             with open('new_token.txt', 'w') as f:
                 f.write(new_refresh)
-        # --- KẾT THÚC ĐOẠN THÊM VÀO ---
 
         return res_data.get('access_token') or ErrorHandler.abort(
             401,
