@@ -22,8 +22,8 @@ jobs:
         run: pip install httpx
 
       - name: Chờ ngẫu nhiên để tránh bot detection
-        # Sẽ dừng ngẫu nhiên từ 0 đến 1800 giây (30 phút) trước khi chạy script
-        run: sleep $((RANDOM % 1800))
+        # Sẽ dừng ngẫu nhiên từ 0 đến 500 giây trước khi chạy script
+        run: sleep $((RANDOM % 500))
 
       - name: Chạy script gia hạn E5
         env:
