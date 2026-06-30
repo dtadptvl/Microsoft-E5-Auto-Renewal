@@ -3,7 +3,7 @@ name: Microsoft E5 Auto Renew
 on:
   schedule:
     # Chạy mỗi giờ
-    - cron: '0 * * * *'
+    - cron: '17 * * * *'
   workflow_dispatch: # Cho phép bạn bấm chạy bằng tay trên GitHub
 
 jobs:
