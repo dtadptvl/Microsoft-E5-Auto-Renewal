@@ -23,7 +23,7 @@ jobs:
 
       - name: Chờ ngẫu nhiên để tránh bot detection
         # Sẽ dừng ngẫu nhiên từ 0 đến 500 giây trước khi chạy script
-        run: sleep $((RANDOM % 300))
+        run: sleep $((RANDOM % 500))
 
       - name: Chạy script gia hạn E5
         env:
